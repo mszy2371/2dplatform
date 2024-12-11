@@ -1,11 +1,12 @@
-import pygame, sys
-from settings import * 
+import pygame
+import sys
+from settings import * #noqa
 from level import Level
 from overworld import Overworld
 from ui import UI
 
 class Game:
-	def __init__(self):
+	def __init__(self): 
 
 		# game attributes
 		self.max_level = 2
@@ -14,8 +15,8 @@ class Game:
 		self.coins = 0
 		
 		# audio 
-		self.level_bg_music = pygame.mixer.Sound('../audio/level_music.wav')
-		self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.wav')
+		self.level_bg_music = pygame.mixer.Sound('audio/level_music.wav')
+		self.overworld_bg_music = pygame.mixer.Sound('audio/overworld_music.wav')
 
 		# overworld creation
 		self.overworld = Overworld(0,self.max_level,screen,self.create_level)
